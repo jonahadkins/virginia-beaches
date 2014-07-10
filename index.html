@@ -142,7 +142,7 @@
         this.story.clear();
 
         if (this.baseurl && (this.baseurl !== actions.global.baseurl)) {
-          this.baseurl = actions.global.baseurl || 'http://0.api.cartocdn.com/base-light/{z}/{x}/{y}.png';
+          this.baseurl = actions.global.baseurl || 'http://{s}.sm.mapstack.stamen.com/naip/{z}/{x}/{y}.png';
 
           this.basemap.setUrl(this.baseurl);
         }
@@ -249,8 +249,8 @@
 
 
 <script id="md_template" type="text/template">```
--title: ""
--author: ""
+-title: "title"
+-author: "author"
 ```
 
 #Your first odyssey.js story
