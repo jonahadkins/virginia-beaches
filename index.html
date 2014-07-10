@@ -27,8 +27,8 @@
   </div>
 
   <div id="credits">
-    <span class="title" id="title">Title</span>
-    <span class="author"><strong id="author">By Name using</strong> <a href="http://cartodb.github.io/odyssey.js/">Odyssey.js</a><span>
+    <span class="title" id="title">Virginia Beaches || Testing Odyssey.js With A <a target="blank" href="http://www.washingtonpost.com/local/skip-the-boardwalk-tunnels-5-virginia-beaches-youve-never-heard-of/2013/06/04/5d8a7ce4-cd37-11e2-9f1a-1a7cdee20287_story.html">Washington Post Article</a> By Jane Elizabeth</span>
+    <span class="author">By <strong id="author"><a target="blank" href="http://twitter.com/jonahadkins">@jonahadkins</a></strong> Using <a target="blank" href="http://cartodb.github.io/odyssey.js/">Odyssey.js</a><span>
   </span></span></div>
 
   <script src="http://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/cartodb.js"></script>
@@ -112,10 +112,10 @@
       init: function() {
         var seq = O.Triggers.Sequential();
 
-        var baseurl = this.baseurl = 'http://{s}.api.cartocdn.com/base-light/{z}/{x}/{y}.png';
+        var baseurl = this.baseurl = 'http://{s}.sm.mapstack.stamen.com/naip/{z}/{x}/{y}.png'; //http://a.sm.mapstack.stamen.com/naip/11/326/790.png
         var map = this.map = L.map('map').setView([0, 0.0], 4);
         var basemap = this.basemap = L.tileLayer(baseurl, {
-          attribution: 'data OSM - map CartoDB'
+          attribution: 'stamen mapstack'
         }).addTo(map);
 
         // enanle keys to move
@@ -249,15 +249,15 @@
 
 
 <script id="md_template" type="text/template">```
--title: "Odyssey example FTW"
--author: "CartoDB"
+-title: ""
+-author: ""
 ```
 
 #Your first odyssey.js story
 ```
-- center: [37.7620, -122.4385]
+- center: [37.5358, -77.4536]
 - zoom: 9
-L.marker([37.7620, -122.4385]).actions.addRemove(S.map)
+L.marker([37.5358, -77.4536]).actions.addRemove(S.map)
 ```
 
 Move the map around and save the position by clicking on "ADD > Move map to the current position". As you can see, now we are highlighting San Francisco.
